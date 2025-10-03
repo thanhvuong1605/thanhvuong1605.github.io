@@ -298,7 +298,7 @@ const commands = {
             </div>
             <div class="block">
                 <ul>
-                    <li><strong>Data Science Mentor</strong> at MASSP - Math and Summer Science Program (2021)</li>
+                    <li><strong>Data Science Mentor</strong> at MASSP - Math and Science Summer Program (2021)</li>
                 </ul>
             </div>
         </div>
