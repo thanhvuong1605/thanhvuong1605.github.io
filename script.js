@@ -432,14 +432,14 @@ async function revealContent(container, htmlString) {
                 link.addEventListener('click', handleLinkClick);
             });
             
-            // Animate in
-            await new Promise(resolve => setTimeout(resolve, 30));
-            blockClone.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+            // Animate in smoothly
+            await new Promise(resolve => setTimeout(resolve, 50));
+            blockClone.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
             blockClone.style.opacity = '1';
             blockClone.style.transform = 'translateY(0)';
             
-            // Wait before showing next block
-            await new Promise(resolve => setTimeout(resolve, 300));
+            // Wait before showing next block (smoother)
+            await new Promise(resolve => setTimeout(resolve, 250));
             
             // Scroll smoothly
             window.scrollTo({
@@ -461,20 +461,20 @@ async function revealContent(container, htmlString) {
                 link.addEventListener('click', handleLinkClick);
             });
             
-            await new Promise(resolve => setTimeout(resolve, 30));
-            clone.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+            await new Promise(resolve => setTimeout(resolve, 40));
+            clone.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
             clone.style.opacity = '1';
             clone.style.transform = 'translateY(0)';
             
-            await new Promise(resolve => setTimeout(resolve, 200));
+            await new Promise(resolve => setTimeout(resolve, 180));
         }
     }
     
     isTypingAnimation = false;
 }
 
-// Link click handler
-function handleLinkClick(e) {
+// Link click handler with typing animation
+async function handleLinkClick(e) {
     e.preventDefault();
     e.stopPropagation();
     
@@ -483,11 +483,26 @@ function handleLinkClick(e) {
     const command = e.currentTarget.getAttribute('data-command');
     if (!command) return;
     
-    currentInput = command;
-    inputText.textContent = command;
+    isTypingAnimation = true;
+    
+    // Type out the command
+    currentInput = '';
+    inputText.textContent = '';
+    
+    for (let i = 0; i < command.length; i++) {
+        currentInput += command[i];
+        inputText.textContent = currentInput;
+        await new Promise(resolve => setTimeout(resolve, 60));
+    }
+    
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
+    // Execute the command
     executeCommand(command);
     currentInput = '';
     inputText.textContent = '';
+    
+    isTypingAnimation = false;
 }
 
 // Typing animation for page load
@@ -515,27 +530,33 @@ async function initTypingAnimation() {
     const navLinks = document.querySelectorAll('.nav-links a');
     const inputLine = document.querySelector('.input-line');
     
-    await new Promise(resolve => setTimeout(resolve, 300));
+    // Initial pause - smoother start
+    await new Promise(resolve => setTimeout(resolve, 500));
     
     headline.classList.remove('hidden');
-    await typeText(headline, 'Thanh Vuong\nData Scientist / ML Engineer.', 35);
+    // Slower headline typing for better readability
+    await typeText(headline, 'Thanh Vuong\nData Scientist / ML Engineer.', 50);
     
-    await new Promise(resolve => setTimeout(resolve, 200));
+    // Longer pause after headline
+    await new Promise(resolve => setTimeout(resolve, 400));
     
-    promptLine.style.transition = 'opacity 0.1s ease-out';
+    // Smoother prompt line appearance
+    promptLine.style.transition = 'opacity 0.3s ease-out';
     promptLine.classList.remove('hidden');
     
-    await new Promise(resolve => setTimeout(resolve, 300));
+    // Pause before nav links
+    await new Promise(resolve => setTimeout(resolve, 500));
     
+    // Slower nav links appearance
     for (const link of navLinks) {
-        link.style.transition = 'opacity 0.05s ease-out';
+        link.style.transition = 'opacity 0.2s ease-out';
         link.classList.remove('hidden');
-        await new Promise(resolve => setTimeout(resolve, 50));
+        await new Promise(resolve => setTimeout(resolve, 100));
     }
     
-    // Show input line last
-    await new Promise(resolve => setTimeout(resolve, 200));
-    inputLine.style.transition = 'opacity 0.3s ease-out';
+    // Show input line last with smoother transition
+    await new Promise(resolve => setTimeout(resolve, 400));
+    inputLine.style.transition = 'opacity 0.4s ease-out';
     inputLine.classList.remove('hidden');
     
     userCanType = true;
