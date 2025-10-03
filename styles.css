@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: #a1a8aa;
+    --text-tertiary: #7a8385;
+    --accent-color: #e86464;
+    --accent-hover: #f07777;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+    background: #0a0e1a;
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: default;
+    position: relative;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Compact intense sun glow - PERFECT glowing animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle 550px at 90% 10%, 
+            rgba(255, 255, 255, 0.45) 0%, 
+            rgba(255, 255, 255, 0.35) 18%,
+            rgba(255, 252, 248, 0.22) 35%,
+            rgba(255, 250, 242, 0.12) 50%,
+            rgba(255, 248, 235, 0.06) 65%,
+            transparent 80%),
+        radial-gradient(circle 400px at 10% 90%, 
+            rgba(255, 255, 255, 0.1) 0%, 
+            rgba(240, 245, 255, 0.05) 40%, 
+            transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+    animation: sunGlowOut 9s ease-in-out infinite;
+}
+
+@keyframes sunGlowOut {
+    0% {
+        opacity: 0.65;
+        filter: blur(0px) brightness(1);
+    }
+    50% {
+        opacity: 1;
+        filter: blur(8px) brightness(1.15);
+    }
+    100% {
+        opacity: 0.65;
+        filter: blur(0px) brightness(1);
+    }
+}
+
+/* Secondary radiance layer - synchronized glow */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse 500px 400px at 92% 8%, 
+            rgba(255, 255, 255, 0.3) 0%, 
+            rgba(255, 254, 252, 0.18) 25%, 
+            rgba(255, 252, 248, 0.09) 45%, 
+            transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+    animation: sunRadianceGlow 9s ease-in-out infinite;
+}
+
+@keyframes sunRadianceGlow {
+    0% {
+        opacity: 0.5;
+        filter: blur(0px);
+    }
+    50% {
+        opacity: 1;
+        filter: blur(12px);
+    }
+    100% {
+        opacity: 0.5;
+        filter: blur(0px);
+    }
+}
+
+.terminal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.terminal-content {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.terminal-output {
+    margin-bottom: 2rem;
+}
+
+/* Headline */
+.headline {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0;
+    margin-bottom: 3.5rem;
+    color: var(--text-primary);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Prompt Line */
+.prompt-line {
+    font-size: 1.25rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+}
+
+.prompt-path {
+    color: var(--text-tertiary);
+}
+
+.prompt-symbol {
+    color: var(--text-tertiary);
+    margin: 0 0.75rem;
+}
+
+.prompt-command {
+    color: var(--text-tertiary);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1rem;
+}
+
+.nav-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    width: fit-content;
+    letter-spacing: 0;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.nav-links a:hover {
+    color: var(--accent-hover);
+    transform: translateX(8px);
+    text-shadow: 0 0 20px rgba(232, 100, 100, 0.4);
+}
+
+/* Input Line */
+.input-line {
+    font-size: 1.25rem;
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    letter-spacing: 0;
+    line-height: 1.6;
+}
+
+.input-text {
+    color: var(--text-primary);
+}
+
+.cursor {
+    color: var(--accent-color);
+    animation: blink 1.2s step-end infinite;
+    font-weight: 400;
+    margin-left: 1px;
+    text-shadow: 0 0 10px rgba(232, 100, 100, 0.5);
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    50.01%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Command Output */
+.command-output {
+    margin: 2rem 0 3rem 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.command-output p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.command-output a {
+    color: #83a6ff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(131, 166, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.command-output a:hover {
+    color: #a3bfff;
+    border-bottom-color: #83a6ff;
+    text-shadow: 0 0 10px rgba(131, 166, 255, 0.3);
+}
+
+.command-output .section-title {
+    color: #e86464 !important;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.command-output ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.command-output ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.command-output ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    line-height: 1.6;
+}
+
+.command-output i {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.command-output strong {
+    font-weight: 600;
+}
+
+/* Command History */
+.command-history {
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+
+.user-command {
+    color: var(--text-primary);
+}
+
+.error-output {
+    color: var(--accent-color);
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Block spacing */
+.block {
+    margin-bottom: 1.5rem;
+}
+
+.block:last-child {
+    margin-bottom: 0;
+}
+
+/* Selection */
+::selection {
+    background-color: rgba(232, 100, 100, 0.3);
+    color: var(--text-primary);
+}
+
+::-moz-selection {
+    background-color: rgba(232, 100, 100, 0.3);
+    color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(161, 168, 170, 0.3);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(161, 168, 170, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .headline {
+        font-size: 3rem;
+    }
+    
+    .prompt-line,
+    .input-line {
+        font-size: 1.15rem;
+    }
+    
+    .nav-links a {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .terminal {
+        padding: 2.5rem 2rem;
+        justify-content: flex-start;
+    }
+    
+    .headline {
+        font-size: 2.25rem;
+        margin-bottom: 3rem;
+    }
+    
+    .prompt-line,
+    .input-line {
+        font-size: 1.05rem;
+    }
+    
+    .nav-links a {
+        font-size: 1.05rem;
+    }
+    
+    .command-output {
+        font-size: 0.95rem;
+    }
+    
+    body::after {
+        animation: rotateGlow 20s linear infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal {
+        padding: 2rem 1.25rem;
+    }
+    
+    .headline {
+        font-size: 1.75rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .prompt-line,
+    .input-line {
+        font-size: 1rem;
+    }
+    
+    .prompt-symbol {
+        margin: 0 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+    }
+    
+    .command-output {
+        font-size: 0.9rem;
+    }
+}
+
+/* Smooth transitions */
+* {
+    transition: color 0.2s ease;
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Ensure content stays at bottom on scroll */
+@media (min-height: 900px) {
+    .terminal {
+        padding-bottom: 4rem;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+    
+    .cursor {
+        animation: none;
+        opacity: 1;
+    }
+}
