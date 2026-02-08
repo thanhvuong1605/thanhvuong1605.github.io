@@ -4,10 +4,10 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">About Me</p>
-                <p>Senior Data Scientist and Machine Learning Engineer Lead with 6+ years of experience building real-time ML systems for ride-hailing, e-commerce, and fintech platforms.</p>
+                <p>Senior Data Scientist and Machine Learning Engineer Lead with 7+ years of experience building real-time ML systems for ride-hailing, e-commerce, and fintech platforms.</p>
             </div>
             <div class="block">
-                <p>Currently pursuing Master of Artificial Intelligence at RMIT University with scholarship.</p>
+                <p>Currently pursuing Master of Artificial Intelligence at RMIT University with scholarship. Led ML teams and shipped models that drive revenue, improve conversion, and optimize operations at scale.</p>
             </div>
             <div class="block">
                 <p class="section-title" style="color: #e86464;">What I Do</p>
@@ -28,6 +28,7 @@ const commands = {
                     <a href="#" data-command="tiki">tiki</a>
                     <a href="#" data-command="sendo">sendo</a>
                     <a href="#" data-command="fpt">fpt</a>
+                    <a href="#" data-command="volunteer">volunteer</a>
                 </div>
             </div>
         </div>
@@ -58,11 +59,12 @@ const commands = {
             </div>
             
             <div class="block">
-                <p style="color: var(--accent-color); margin-top: 1rem;">Multi-Dispatch Engine</p>
+                <p style="color: var(--accent-color); margin-top: 1rem;">Dispatch Engine</p>
                 <ul>
-                    <li>Built a predictive model to score rider-driver pairings for optimal matching</li>
-                    <li>Implemented a linear sum assignment algorithm to maximize overall rider-driver match scores</li>
-                    <li>Increased <strong>completion rate (CR) by 10%</strong> and reduced <strong>average pickup distance by 30%</strong></li>
+                    <li>Built an <strong>A/B testing framework</strong> to validate dispatch strategies and model improvements in real-time production environments</li>
+                    <li>Developed an enhanced driver–rider scoring model that increased <strong>completion rate (CR) by an additional 6%</strong> compared to the baseline model</li>
+                    <li>Implemented a <strong>Multi-Armed Bandit (MAB)</strong> testing module to dynamically allocate traffic across dispatch policies, accelerating learning under changing market conditions</li>
+                    <li>Implemented a linear sum assignment algorithm to maximize overall rider-driver match scores; reduced <strong>average pickup distance by 30%</strong></li>
                 </ul>
             </div>
             
@@ -227,12 +229,14 @@ const commands = {
                 <p class="section-title" style="color: #e86464;">Master of Artificial Intelligence</p>
                 <p>RMIT University | 2024 - Present</p>
                 <p><i>Scholarship Awarded</i></p>
+                <p style="margin-top: 0.5rem;">Focus on advanced ML, deep learning, and AI systems.</p>
             </div>
             
             <div class="block">
                 <p class="section-title" style="color: #e86464; margin-top: 2rem;">Bachelor of Engineering</p>
                 <p>Vaasa University of Applied Sciences | 2014 - 2018</p>
                 <p><i>Software Engineering</i></p>
+                <p style="margin-top: 0.5rem;">International degree; strong foundation in software and algorithms.</p>
             </div>
         </div>
     `,
@@ -246,7 +250,7 @@ const commands = {
             
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Machine Learning</p>
-                <p>Deep Learning, Time Series, NLP, Recommender Systems</p>
+                <p>Deep Learning, Time Series, NLP, Recommender Systems, Computer Vision</p>
             </div>
             
             <div class="block">
@@ -260,8 +264,34 @@ const commands = {
             </div>
             
             <div class="block">
-                <p class="section-title" style="color: #e86464;">Databases</p>
+                <p class="section-title" style="color: #e86464;">Databases & Search</p>
                 <p>Elasticsearch, PostgreSQL, MongoDB, Redis</p>
+            </div>
+            
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">Languages</p>
+                <p>English (fluent), Vietnamese (native)</p>
+            </div>
+        </div>
+    `,
+    
+    volunteer: `
+        <div class="command-output">
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">Nhu Chua He Co Cuoc Chia Ly – People Reunification Portal</p>
+                <p><i>Volunteer Data Scientist / AI Engineer</i></p>
+            </div>
+            <div class="block">
+                <p style="margin-top: 1rem;">Developed a GenAI-powered matching system to support locating missing persons and reconnecting separated families.</p>
+            </div>
+            <div class="block">
+                <p style="color: var(--accent-color); margin-top: 1rem;">Key contributions</p>
+                <ul>
+                    <li>Designed AI workflows leveraging <strong>NLP and semantic search</strong> to analyze incomplete, noisy, and unstructured user-submitted information</li>
+                    <li>Collaborated with FPT Cloud to deploy and operate production systems at scale</li>
+                    <li>Successfully launched public platforms: <a href="https://nhuchuahecocuochialy.com" target="_blank" style="color: #83a6ff;">nhuchuahecocuochialy.com</a> and <a href="https://portal.nhuchuahecocuocchialy.com" target="_blank" style="color: #83a6ff;">portal.nhuchuahecocuocchialy.com</a></li>
+                    <li>Built a secure user portal for case submission, authentication, and AI-assisted candidate suggestion</li>
+                </ul>
             </div>
         </div>
     `,
@@ -270,6 +300,11 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Certifications and Awards</p>
+            </div>
+            <div class="block">
+                <ul>
+                    <li><strong>Excellent Project Award – Dispatch Engine</strong> (2025)</li>
+                </ul>
             </div>
             <div class="block">
                 <ul>
@@ -310,11 +345,14 @@ const commands = {
                 <p class="section-title" style="color: #e86464;">Let's Connect</p>
                 <p>Email: <a href="mailto:phucthanhvuong@gmail.com" style="color: #83a6ff;">phucthanhvuong@gmail.com</a></p>
                 <p>Phone: <a href="tel:+84966097061" style="color: #83a6ff;">(+84) 966097061</a></p>
-                <p>Location: Hochiminh, Vietnam</p>
+                <p>Location: Ho Chi Minh City, Vietnam</p>
             </div>
             <div class="block">
                 <p style="margin-top: 1.5rem;">GitHub: <a href="https://github.com/thanhvuong1605" target="_blank" style="color: #83a6ff;">github.com/thanhvuong1605</a></p>
                 <p>LinkedIn: <a href="https://linkedin.com/in/thanh-vuong-182449b0" target="_blank" style="color: #83a6ff;">linkedin.com/in/thanh-vuong-182449b0</a></p>
+            </div>
+            <div class="block">
+                <p style="margin-top: 1rem;">Open to collaboration and new opportunities in ML/AI and data science.</p>
             </div>
         </div>
     `,
@@ -327,11 +365,11 @@ const commands = {
             </div>
             <div class="block">
                 <p style="margin-top: 1.5rem;">
-                    <a href="CV_ThanhVuong_2025.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
+                    <a href="ThanhVuong_CV_2026.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
                         📄 Download CV (PDF)
                     </a>
                 </p>
-                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: 2025</p>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: 2026</p>
             </div>
         </div>
     `,
@@ -344,11 +382,11 @@ const commands = {
             </div>
             <div class="block">
                 <p style="margin-top: 1.5rem;">
-                    <a href="CV_ThanhVuong_2025.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
+                    <a href="ThanhVuong_CV_2026.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
                         📄 Download CV (PDF)
                     </a>
                 </p>
-                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: 2025</p>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: 2026</p>
             </div>
         </div>
     `,
@@ -360,6 +398,7 @@ const commands = {
             <a href="#" data-command="education">education</a>
             <a href="#" data-command="skills">skills</a>
             <a href="#" data-command="awards">awards</a>
+            <a href="#" data-command="volunteer">volunteer</a>
             <a href="#" data-command="cv">cv</a>
             <a href="#" data-command="contact">contact</a>
         </div>
@@ -371,7 +410,7 @@ const commands = {
                 <p class="section-title" style="color: #e86464;">Available commands:</p>
                 <ul>
                     <li><span style="color: var(--accent-color);">about</span> - Learn about Thanh Vuong</li>
-                    <li><span style="color: var(--accent-color);">experience</span> - View work experience (then type: be, tiki, sendo, or fpt)</li>
+                    <li><span style="color: var(--accent-color);">experience</span> - View work experience (then type: be, tiki, sendo, fpt, or volunteer)</li>
                     <li><span style="color: var(--accent-color);">education</span> - Academic background</li>
                 </ul>
             </div>
@@ -379,6 +418,7 @@ const commands = {
                 <ul>
                     <li><span style="color: var(--accent-color);">skills</span> - Technical skills</li>
                     <li><span style="color: var(--accent-color);">awards</span> - Certifications and awards</li>
+                    <li><span style="color: var(--accent-color);">volunteer</span> - Volunteer project (People Reunification Portal)</li>
                     <li><span style="color: var(--accent-color);">cv</span> - Download CV/Resume</li>
                     <li><span style="color: var(--accent-color);">contact</span> - Contact information</li>
                 </ul>
@@ -667,6 +707,7 @@ function clearTerminal() {
             <a href="#" data-command="education">education</a>
             <a href="#" data-command="skills">skills</a>
             <a href="#" data-command="awards">awards</a>
+            <a href="#" data-command="volunteer">volunteer</a>
             <a href="#" data-command="cv">cv</a>
             <a href="#" data-command="contact">contact</a>
         </div>
