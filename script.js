@@ -4,10 +4,10 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">About Me</p>
-                <p>Senior Data Scientist and Machine Learning Engineer Lead with 7+ years of experience building real-time ML systems for ride-hailing, e-commerce, and fintech platforms.</p>
+                <p>Senior Data Scientist and Machine Learning Engineer Lead with years of experience building real-time ML systems for ride-hailing, e-commerce, and fintech platforms.</p>
             </div>
             <div class="block">
-                <p>Currently pursuing Master of Artificial Intelligence at RMIT University with scholarship. Led ML teams and shipped models that drive revenue, improve conversion, and optimize operations at scale.</p>
+                <p>Master of Artificial Intelligence from RMIT University (Distinction, scholarship), where my GuideFlow capstone with AstraZeneca won the Best Project Award. Led ML teams and shipped models that drive revenue, improve conversion, and optimize operations at scale.</p>
             </div>
             <div class="block">
                 <p class="section-title" style="color: #e86464;">What I Do</p>
@@ -24,11 +24,12 @@ const commands = {
             <div class="block">
                 <p>Type a company name to see detailed experience:</p>
                 <div class="nav-links" style="margin-top: 1.5rem;">
+                    <a href="#" data-command="masterhive">masterhive</a>
                     <a href="#" data-command="be">be</a>
-                    <a href="#" data-command="tiki">tiki</a>
                     <a href="#" data-command="sendo">sendo</a>
                     <a href="#" data-command="fpt">fpt</a>
                     <a href="#" data-command="volunteer">volunteer</a>
+                    <a href="#" data-command="other">other</a>
                 </div>
             </div>
         </div>
@@ -38,17 +39,27 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Be Group JSC - Ride-hailing Application</p>
-                <p><i>Senior Data Scientist/Machine Learning Engineer Lead</i> | 08/2022 - Present</p>
+                <p><i>Senior Data Scientist/Machine Learning Engineer Lead</i> | 08/2022 - 09/2026</p>
             </div>
             
             <div class="block">
                 <p style="margin-top: 1.5rem;">Led a team of 4 ML engineers to design and maintain real-time ML models for pricing, dispatch, and recommendations, car pool and delivery systems. Developed and optimized production ML pipelines, improving scalability and efficiency.</p>
             </div>
-            
+
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Key Projects:</p>
             </div>
-            
+
+            <div class="block">
+                <p style="color: var(--accent-color); margin-top: 1rem;">Internal AI Agent Platform</p>
+                <ul>
+                    <li>Designed and built an <strong>internal multi-agent AI platform</strong> giving the DS &amp; engineering teams a unified assistant for daily knowledge work</li>
+                    <li>Use cases: Q&amp;A over <strong>Confluence docs, GitLab code, and BigQuery datasets</strong>; dispatch rule configuration &amp; explanation; on-call troubleshooting and operational support</li>
+                    <li>Built an <strong>internal MCP server</strong> bridging agents to Confluence, GitLab, and BigQuery, so any agent can answer with grounded company knowledge</li>
+                    <li>Delivered a <strong>Dispatch configuration UI</strong> on top: business team configures dispatch scoring rules via web UI; AI explains rule impact (trace driver, simulate, estimate). Rule changes <strong>hot-reload into the production dispatch engine</strong> in real time, replacing ad-hoc code-edit-and-deploy workflows</li>
+                </ul>
+            </div>
+
             <div class="block">
                 <p style="color: var(--accent-color); margin-top: 1rem;">Dynamic Pricing Engine</p>
                 <ul>
@@ -100,33 +111,61 @@ const commands = {
             </div>
         </div>
     `,
-    
-    tiki: `
+
+    masterhive: `
         <div class="command-output">
             <div class="block">
-                <p class="section-title" style="color: #e86464;">Tiki - E-commerce Platform</p>
-                <p><i>Senior Data Scientist - Financial Product</i> | 05/2022 - 08/2022</p>
+                <p class="section-title" style="color: #e86464;">MasterHive.AI — Health-Data Platform Startup</p>
+                <p><i>Founding Member</i> | 2026 - Present</p>
             </div>
-            
+
             <div class="block">
-                <p style="color: var(--accent-color); margin-top: 1.5rem;">Customer Segmentation</p>
+                <p style="margin-top: 1.5rem;">Built a health-data platform from first design to a live system serving a province-scale user base. Three products:</p>
+            </div>
+
+            <div class="block">
+                <p style="color: var(--accent-color); margin-top: 1rem;">MasterHive — Electronic Health Record Platform</p>
                 <ul>
-                    <li>Expanded customer segmentation in the CDP to enhance targeting for insurance marketing campaigns</li>
-                    <li>Developed segmentation models and analyzed cluster characteristics to derive actionable insights</li>
-                    <li>Collaborated with the business team to refine customer targeting strategies and optimize marketing effectiveness</li>
+                    <li>EHR for healthcare providers, in production across a provincial network of <strong>hospitals, district health centers and commune clinics</strong></li>
+                    <li>Clinicians create, sign and manage records through configurable clinical forms, with each patient's history aggregated across facilities</li>
                 </ul>
             </div>
-            
+
             <div class="block">
-                <p style="color: var(--accent-color); margin-top: 1rem;">Propensity Model</p>
+                <p style="color: var(--accent-color); margin-top: 1rem;">MasterFlow — Provincial Health Database Platform</p>
                 <ul>
-                    <li>Designed propensity models to predict customer likelihood of clicking or purchasing</li>
-                    <li>Achieved <strong>90% precision and 70% recall</strong>, generating a high-confidence list of potential customers for Tiki's insurance products</li>
+                    <li>Ingests and standardizes health-examination records from every facility in a province, enforces <strong>data-quality validation</strong>, and routes them through approval</li>
+                    <li>Serves as the province's <strong>single reporting channel</strong> to the national Ministry of Health</li>
+                    <li>In its first production deployment inside a <strong>government data center</strong> on a <strong>.gov.vn</strong> domain, with a partner API opening for the city app</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <p style="color: var(--accent-color); margin-top: 1rem;">MasterCare — Patient Mobile App (iOS &amp; Android)</p>
+                <ul>
+                    <li>Patients browse their own medical history as a timeline, get <strong>AI-generated health summaries with citations</strong> back to source records</li>
+                    <li>Receive medication and follow-up reminders</li>
                 </ul>
             </div>
         </div>
     `,
-    
+
+    other: `
+        <div class="command-output">
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">AI Pharmacist Assistant - Major Vietnamese Pharmacy Retail Chain</p>
+                <p><i>AI / ML Architect - Proof of Concept</i> | 2026</p>
+            </div>
+
+            <div class="block">
+                <ul style="margin-top: 1.5rem;">
+                    <li>POC for an in-store AI assistant supporting pharmacists across a <strong>1,000+ store retail chain</strong>: contextual customer engagement (Customer 360), cross-sell / up-sell, smart FEFO alerts, and omni-knowledge helpdesk (drug info, SOPs, HR)</li>
+                    <li>Designed a multi-agent architecture (Intent Router, Context Manager, specialized agent swarms) delivered as a POS-integrated mini-app with A/B testing for safe rollout</li>
+                </ul>
+            </div>
+        </div>
+    `,
+
     sendo: `
         <div class="command-output">
             <div class="block">
@@ -227,9 +266,10 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Master of Artificial Intelligence</p>
-                <p>RMIT University | 2024 - Present</p>
-                <p><i>Scholarship Awarded</i></p>
+                <p>RMIT University | 2024 - 2026</p>
+                <p><i>Grade: Distinction | Scholarship Awarded</i></p>
                 <p style="margin-top: 0.5rem;">Focus on advanced ML, deep learning, and AI systems.</p>
+                <p style="margin-top: 0.5rem;"><strong>Best Project Award</strong> – AI Postgraduate Project: <i>"GuideFlow: An Explainable, LLM-Constructed Clinical Decision Support System for Diabetes Management"</i> (industry partner: AstraZeneca).</p>
             </div>
             
             <div class="block">
@@ -244,28 +284,43 @@ const commands = {
     skills: `
         <div class="command-output">
             <div class="block">
+                <p class="section-title" style="color: #e86464;">LLM &amp; AI Agents</p>
+                <p>LangGraph, LangChain, LlamaIndex, multi-agent systems, MCP (Model Context Protocol), tool calling, OpenAI / Anthropic (Claude) APIs</p>
+            </div>
+            
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">RAG &amp; Vector Search</p>
+                <p>RAG pipelines, embeddings, hybrid &amp; semantic search, grounded answers with citations; pgvector, Qdrant, Milvus, Elasticsearch</p>
+            </div>
+            
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">LLM Evaluation &amp; Observability</p>
+                <p>DeepEval, Langfuse, LLM-as-a-judge, RAG &amp; agent evaluation</p>
+            </div>
+            
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">Machine Learning &amp; Deep Learning</p>
+                <p>PyTorch, TensorFlow / Keras, scikit-learn, LightGBM, XGBoost, CatBoost; Time Series, NLP, Recommender Systems, Computer Vision</p>
+            </div>
+            
+            <div class="block">
+                <p class="section-title" style="color: #e86464;">MLOps &amp; Deployment</p>
+                <p>MLflow, ONNX, A/B testing &amp; Multi-Armed Bandit, Docker, Kubernetes, CI/CD, FastAPI, Grafana</p>
+            </div>
+            
+            <div class="block">
                 <p class="section-title" style="color: #e86464;">Programming</p>
                 <p>Python, SQL</p>
             </div>
             
             <div class="block">
-                <p class="section-title" style="color: #e86464;">Machine Learning</p>
-                <p>Deep Learning, Time Series, NLP, Recommender Systems, Computer Vision</p>
-            </div>
-            
-            <div class="block">
                 <p class="section-title" style="color: #e86464;">Big Data Technologies</p>
-                <p>Apache Spark, Kafka, Hadoop, Airflow, GCP, BigQuery, PubSub</p>
+                <p>Apache Spark, Kafka, Hadoop, Airflow, GCP, BigQuery, Pub/Sub</p>
             </div>
             
             <div class="block">
-                <p class="section-title" style="color: #e86464;">DevOps & Deployment</p>
-                <p>Docker, Kubernetes, CI/CD Pipelines, FastAPI, Grafana</p>
-            </div>
-            
-            <div class="block">
-                <p class="section-title" style="color: #e86464;">Databases & Search</p>
-                <p>Elasticsearch, PostgreSQL, MongoDB, Redis</p>
+                <p class="section-title" style="color: #e86464;">Databases &amp; Search</p>
+                <p>PostgreSQL, MongoDB, Redis, Elasticsearch</p>
             </div>
             
             <div class="block">
@@ -289,7 +344,7 @@ const commands = {
                 <ul>
                     <li>Designed AI workflows leveraging <strong>NLP and semantic search</strong> to analyze incomplete, noisy, and unstructured user-submitted information</li>
                     <li>Collaborated with FPT Cloud to deploy and operate production systems at scale</li>
-                    <li>Successfully launched public platforms: <a href="https://nhuchuahecocuochialy.com" target="_blank" style="color: #83a6ff;">nhuchuahecocuochialy.com</a> and <a href="https://portal.nhuchuahecocuocchialy.com" target="_blank" style="color: #83a6ff;">portal.nhuchuahecocuocchialy.com</a></li>
+                    <li>Successfully launched public platforms: <a href="https://nhuchuahecocuocchialy.com" target="_blank" style="color: #83a6ff;">nhuchuahecocuocchialy.com</a> and <a href="https://portal.nhuchuahecocuocchialy.com" target="_blank" style="color: #83a6ff;">portal.nhuchuahecocuocchialy.com</a></li>
                     <li>Built a secure user portal for case submission, authentication, and AI-assisted candidate suggestion</li>
                 </ul>
             </div>
@@ -300,6 +355,11 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Certifications and Awards</p>
+            </div>
+            <div class="block">
+                <ul>
+                    <li><strong>Best Project Award – RMIT AI Postgraduate Project</strong> - GuideFlow, AstraZeneca partner (2026)</li>
+                </ul>
             </div>
             <div class="block">
                 <ul>
@@ -365,11 +425,11 @@ const commands = {
             </div>
             <div class="block">
                 <p style="margin-top: 1.5rem;">
-                    <a href="ThanhVuong_CV_2026.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
+                    <a href="ThanhVuong_CV_202610.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
                         📄 Download CV (PDF)
                     </a>
                 </p>
-                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: 2026</p>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: August 2026</p>
             </div>
         </div>
     `,
@@ -382,11 +442,11 @@ const commands = {
             </div>
             <div class="block">
                 <p style="margin-top: 1.5rem;">
-                    <a href="ThanhVuong_CV_2026.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
+                    <a href="ThanhVuong_CV_202610.pdf" download style="color: #83a6ff; font-size: 1.1rem;">
                         📄 Download CV (PDF)
                     </a>
                 </p>
-                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: 2026</p>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">Last updated: August 2026</p>
             </div>
         </div>
     `,
@@ -410,7 +470,7 @@ const commands = {
                 <p class="section-title" style="color: #e86464;">Available commands:</p>
                 <ul>
                     <li><span style="color: var(--accent-color);">about</span> - Learn about Thanh Vuong</li>
-                    <li><span style="color: var(--accent-color);">experience</span> - View work experience (then type: be, tiki, sendo, fpt, or volunteer)</li>
+                    <li><span style="color: var(--accent-color);">experience</span> - View work experience (then type: masterhive, be, sendo, fpt, volunteer, or other)</li>
                     <li><span style="color: var(--accent-color);">education</span> - Academic background</li>
                 </ul>
             </div>
@@ -594,11 +654,19 @@ async function initTypingAnimation() {
         await new Promise(resolve => setTimeout(resolve, 100));
     }
     
+    // AI hint after nav links
+    const aiHint = document.querySelector('.ai-hint');
+    if (aiHint) {
+        await new Promise(resolve => setTimeout(resolve, 300));
+        aiHint.style.transition = 'opacity 0.4s ease-out';
+        aiHint.classList.remove('hidden');
+    }
+
     // Show input line last with smoother transition
     await new Promise(resolve => setTimeout(resolve, 400));
     inputLine.style.transition = 'opacity 0.4s ease-out';
     inputLine.classList.remove('hidden');
-    
+
     userCanType = true;
 }
 
@@ -609,57 +677,79 @@ document.addEventListener('selectstart', (e) => {
     }
 });
 
+// Hidden input captures real text including IME composition (Vietnamese/Japanese/etc.)
+const hiddenInput = document.createElement('input');
+hiddenInput.type = 'text';
+hiddenInput.id = 'hiddenInput';
+hiddenInput.setAttribute('autocomplete', 'off');
+hiddenInput.setAttribute('autocorrect', 'off');
+hiddenInput.setAttribute('autocapitalize', 'off');
+hiddenInput.setAttribute('spellcheck', 'false');
+hiddenInput.style.cssText = 'position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0;border:0;padding:0;';
+document.body.appendChild(hiddenInput);
+
+const focusHidden = () => {
+    if (userCanType && !isTypingAnimation) hiddenInput.focus();
+};
+
+hiddenInput.addEventListener('input', () => {
+    if (isTypingAnimation || !userCanType) {
+        hiddenInput.value = currentInput;
+        return;
+    }
+    currentInput = hiddenInput.value;
+    inputText.textContent = currentInput;
+});
+
+hiddenInput.addEventListener('blur', () => setTimeout(focusHidden, 10));
+
 // Focus handling
 document.addEventListener('click', (e) => {
     if (e.target.tagName !== 'A' && userCanType && !isTypingAnimation) {
-        document.body.focus();
+        focusHidden();
     }
 });
 
-// Keyboard input
+// Keyboard input — only special keys; printable chars handled by hidden input
 document.addEventListener('keydown', (e) => {
     if (isTypingAnimation || !userCanType) {
-        if (e.key !== 'Tab') {
-            e.preventDefault();
-        }
+        if (e.key !== 'Tab') e.preventDefault();
         return;
     }
-    
+
     if (e.target.tagName === 'A') return;
 
-    if (['Enter', 'Backspace', 'Tab'].includes(e.key)) {
-        e.preventDefault();
-    }
-
     if (e.key === 'Enter') {
+        e.preventDefault();
         executeCommand(currentInput.trim());
         currentInput = '';
+        hiddenInput.value = '';
         inputText.textContent = '';
-    } else if (e.key === 'Backspace') {
-        currentInput = currentInput.slice(0, -1);
-        inputText.textContent = currentInput;
     } else if (e.key === 'Tab') {
-        const possibleCommands = Object.keys(commands).filter(cmd => 
+        e.preventDefault();
+        const possibleCommands = Object.keys(commands).filter(cmd =>
             cmd.startsWith(currentInput.toLowerCase())
         );
         if (possibleCommands.length === 1) {
             currentInput = possibleCommands[0];
+            hiddenInput.value = currentInput;
             inputText.textContent = currentInput;
         }
     } else if (e.key === 'l' && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
         clearTerminal();
         currentInput = '';
+        hiddenInput.value = '';
         inputText.textContent = '';
     } else if (e.key === 'c' && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
         currentInput = '';
+        hiddenInput.value = '';
         inputText.textContent = '';
-    } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
-        currentInput += e.key;
-        inputText.textContent = currentInput;
     }
 });
+
+window.addEventListener('load', () => setTimeout(focusHidden, 100));
 
 // Execute command
 async function executeCommand(cmd) {
@@ -678,6 +768,7 @@ async function executeCommand(cmd) {
     // Execute command
     if (cmd === 'clear') {
         clearTerminal();
+        chatHistory = [];
         return;
     }
 
@@ -685,8 +776,108 @@ async function executeCommand(cmd) {
     if (commands[cmdLower]) {
         await revealContent(terminalOutput, commands[cmdLower]);
     } else {
-        const errorHTML = `<div class="command-output"><div class="block"><p class="error-output">Command not found: ${escapeHtml(cmd)}</p><p>Type 'help' for available commands.</p></div></div>`;
-        await revealContent(terminalOutput, errorHTML);
+        await askAI(cmd);
+    }
+}
+
+let chatHistory = [];
+const MAX_HISTORY = 20;
+
+async function askAI(question) {
+    const thinking = document.createElement('div');
+    thinking.className = 'command-output';
+    thinking.innerHTML = `<div class="block"><p class="ai-thinking" style="color: var(--accent-color);">thinking<span class="ai-dots">...</span></p></div>`;
+    terminalOutput.appendChild(thinking);
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+    let dots = 0;
+    const dotsEl = thinking.querySelector('.ai-dots');
+    const dotsInterval = setInterval(() => {
+        dots = (dots + 1) % 4;
+        if (dotsEl) dotsEl.textContent = '.'.repeat(dots);
+    }, 400);
+
+    try {
+        const res = await fetch('/api/ask/stream', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question, history: chatHistory.slice(-MAX_HISTORY) })
+        });
+
+        if (res.status === 429) {
+            clearInterval(dotsInterval);
+            thinking.remove();
+            await revealContent(terminalOutput, `<div class="command-output"><div class="block"><p class="error-output">Rate limited. Please slow down and try again in a minute.</p></div></div>`);
+            return;
+        }
+        if (!res.ok || !res.body) {
+            // Stream endpoint unavailable — fall back to the JSON endpoint
+            clearInterval(dotsInterval);
+            thinking.remove();
+            await askAIJson(question);
+            return;
+        }
+
+        clearInterval(dotsInterval);
+        thinking.remove();
+
+        // Render tokens as they stream in, terminal-style
+        const wrap = document.createElement('div');
+        wrap.className = 'command-output';
+        wrap.innerHTML = `<div class="block"><p style="color: var(--accent-color); margin-bottom: 8px;">[ai]</p><p class="ai-answer"></p></div>`;
+        terminalOutput.appendChild(wrap);
+        const answerEl = wrap.querySelector('.ai-answer');
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let raw = '';
+        const render = () => {
+            answerEl.innerHTML = raw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+        };
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            raw += decoder.decode(value, { stream: true });
+            render();
+            window.scrollTo({ top: document.body.scrollHeight });
+        }
+        raw += decoder.decode();
+        render();
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+        chatHistory.push({ role: 'user', content: question });
+        chatHistory.push({ role: 'assistant', content: raw });
+        if (chatHistory.length > MAX_HISTORY) chatHistory = chatHistory.slice(-MAX_HISTORY);
+    } catch (e) {
+        clearInterval(dotsInterval);
+        thinking.remove();
+        await revealContent(terminalOutput, `<div class="command-output"><div class="block"><p class="error-output">Network error. Type 'help' for available commands.</p></div></div>`);
+    }
+}
+
+// Non-streaming fallback (old /api/ask JSON endpoint)
+async function askAIJson(question) {
+    try {
+        const res = await fetch('/api/ask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question, history: chatHistory.slice(-MAX_HISTORY) })
+        });
+        if (!res.ok) {
+            await revealContent(terminalOutput, `<div class="command-output"><div class="block"><p class="error-output">AI unavailable (${res.status}). Type 'help' for available commands.</p></div></div>`);
+            return;
+        }
+        const data = await res.json();
+        const rawAnswer = data.answer || '';
+        chatHistory.push({ role: 'user', content: question });
+        chatHistory.push({ role: 'assistant', content: rawAnswer });
+        if (chatHistory.length > MAX_HISTORY) chatHistory = chatHistory.slice(-MAX_HISTORY);
+
+        const answer = rawAnswer.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+        const html = `<div class="command-output"><div class="block"><p style="color: var(--accent-color); margin-bottom: 8px;">[ai]</p><p>${answer}</p></div></div>`;
+        await revealContent(terminalOutput, html);
+    } catch (e) {
+        await revealContent(terminalOutput, `<div class="command-output"><div class="block"><p class="error-output">Network error. Type 'help' for available commands.</p></div></div>`);
     }
 }
 
@@ -711,8 +902,10 @@ function clearTerminal() {
             <a href="#" data-command="cv">cv</a>
             <a href="#" data-command="contact">contact</a>
         </div>
+
+        <p class="ai-hint">tip: this terminal is AI-powered — just type any question, e.g. "how did Thanh double revenue with ML?"</p>
     `;
-    
+
     addLinkHandlers();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }

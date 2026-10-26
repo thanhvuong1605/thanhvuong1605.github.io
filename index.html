@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Vuong - Data Scientist / ML Engineer</title>
-    <meta name="description" content="Thanh Vuong - Senior Data Scientist and ML Engineer Lead with 7+ years building real-time ML systems for ride-hailing, e-commerce, and fintech. RMIT Master of AI.">
+    <meta name="description" content="Thanh Vuong - Senior Data Scientist and ML Engineer Lead with years of experience building real-time ML systems for ride-hailing, e-commerce, and fintech. RMIT Master of AI.">
     <link rel="stylesheet" href="styles.css?v=99">
     <style>
         /* Force section title color */
@@ -12,11 +12,17 @@
             color: #e86464 !important;
         }
         /* Hide initial elements until animation */
-        .headline.hidden, 
-        .prompt-line.hidden, 
+        .headline.hidden,
+        .prompt-line.hidden,
         .input-line.hidden,
+        .ai-hint.hidden,
         .nav-links a.hidden {
             opacity: 0 !important;
+        }
+        .ai-hint {
+            color: var(--text-tertiary);
+            font-style: italic;
+            margin-top: 1.2rem;
         }
     </style>
 </head>
@@ -42,6 +48,8 @@
                     <a href="#" data-command="cv" class="hidden">cv</a>
                     <a href="#" data-command="contact" class="hidden">contact</a>
                 </div>
+
+                <p class="ai-hint hidden">tip: this terminal is AI-powered — just type any question, e.g. "how did Thanh double revenue with ML?"</p>
             </div>
             
             <div class="input-line hidden">
@@ -53,6 +61,6 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="script.js?v=202610"></script>
 </body>
 </html>
