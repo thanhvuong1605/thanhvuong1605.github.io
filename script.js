@@ -7,7 +7,7 @@ const commands = {
                 <p>Senior Data Scientist and Machine Learning Engineer Lead with years of experience building real-time ML systems for ride-hailing, e-commerce, and fintech platforms.</p>
             </div>
             <div class="block">
-                <p>Master of Artificial Intelligence from RMIT University (Distinction, scholarship), where my GuideFlow capstone with AstraZeneca won the Best Project Award. Led ML teams and shipped models that drive revenue, improve conversion, and optimize operations at scale.</p>
+                <p>Graduated with a Master of Artificial Intelligence from RMIT University in 2026 (Distinction, scholarship), where my GuideFlow capstone with AstraZeneca won the Best Project Award. Led ML teams and shipped models that drive revenue, improve conversion, and optimize operations at scale.</p>
             </div>
             <div class="block">
                 <p class="section-title" style="color: #e86464;">What I Do</p>
@@ -266,7 +266,7 @@ const commands = {
         <div class="command-output">
             <div class="block">
                 <p class="section-title" style="color: #e86464;">Master of Artificial Intelligence</p>
-                <p>RMIT University | 2024 - 2026</p>
+                <p>RMIT University | 2024 - 2026 (Graduated)</p>
                 <p><i>Grade: Distinction | Scholarship Awarded</i></p>
                 <p style="margin-top: 0.5rem;">Focus on advanced ML, deep learning, and AI systems.</p>
                 <p style="margin-top: 0.5rem;"><strong>Best Project Award</strong> – AI Postgraduate Project: <i>"GuideFlow: An Explainable, LLM-Constructed Clinical Decision Support System for Diabetes Management"</i> (industry partner: AstraZeneca).</p>
